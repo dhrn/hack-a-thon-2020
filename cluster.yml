@@ -1,0 +1,12 @@
+nodes:
+  - address: 13.59.234.148
+    user: ec2-user
+    role: [etcd,controlplane,worker]
+    internal_address: 172.31.17.251
+    ssh_key_path: /home/dhrn/Desktop/hack-a-thon.pem
+
+services:
+  kubelet:
+    image:  rancher/hyperkube:v1.15.4-rancher1
+    extra_binds:
+        - "/mnt/volumes:/mnt"
