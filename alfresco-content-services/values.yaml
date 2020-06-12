@@ -574,4 +574,10 @@ global:
     - quay-registry-secret
 
 alfresco-sync-service:
-   enabled : true
+  enabled : true
+  database:
+    external: true
+    driver: org.postgresql.Driver
+    user: alfresco
+    password: alfresco
+    url: jdbc:postgresql://postgresql:5432/alfresco
